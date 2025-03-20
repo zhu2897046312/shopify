@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"time"
-	"web-task/internal/config"
+	"shopify/config"
 	"gorm.io/gorm"
 	"gorm.io/driver/mysql"
 )

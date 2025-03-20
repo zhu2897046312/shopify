@@ -4,10 +4,10 @@ server:
 
 database:
   driver: mysql
-  host: "172.25.13.23"
+  host: "114.55.74.200"
   port: 3306
   username: "root"
-  password: "123"
+  password: "0608"
   dbname: "web"
   charset: "utf8mb4"
 

@@ -81,7 +81,7 @@ func Init() error {
     viper.SetConfigType("yaml")
     
     // 只设置相对于 go.mod 的配置路径
-    viper.AddConfigPath("configs")
+    viper.AddConfigPath("config")
     
     if err := viper.ReadInConfig(); err != nil {
         return fmt.Errorf("failed to read config file: %v\nSearched paths: %v", err, viper.ConfigFileUsed())

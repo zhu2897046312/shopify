@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 	"log"
-	"web-task/internal/api"
-	"web-task/internal/config"
-	"web-task/internal/middleware"
-	"web-task/internal/models"
-	"web-task/internal/repository"
-	"web-task/internal/service"
+	"shopify/config"
+	"shopify/middleware"
+	"shopify/models"
+	"shopify/repository"
+	"shopify/service"
+	"shopify/router"
 
 	"github.com/gin-gonic/gin"
 )
@@ -40,7 +40,7 @@ func main() {
 	r.Use(middleware.Logger())
 
 	// 初始化路由，传入数据库连接
-	api.RegisterRoutes(r, serviceFactory, db)
+	router.RegisterRoutes(r, serviceFactory, db)
 
 	// 启动服务器
 	port := config.GlobalConfig.Server.Port
